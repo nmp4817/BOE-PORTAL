@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 300px;
+        }
+    </style>
+
+</head>
+<body bgcolor="#CCCCCC">
+     
+
+    <form id="form1" runat="server">
+        <div style="width:400; color: #6600FF; background-color: #FFFFFF;">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p style="color: #00FFFF; background-color: #FFFFFF;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                <asp:Label ID="Label1" runat="server" 
+                    style="font-size: xx-large; font-weight: 700; font-style: italic; color: #FF0000" 
+                    Text="Welcome To MSU Board Of Examination" BackColor="#99CCFF"></asp:Label>
+                &nbsp;</p>
+            <p style="background-color: #FFFFFF">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+                    style="font-size: large" Text="Home" Width="150px" />
+                <asp:Button ID="Button3" runat="server" onclick="Button3_Click" 
+                    style="font-size: large" Text="LogIn" Width="150px" />
+                <asp:Button ID="Button2" runat="server" onclick="Button2_Click" 
+                    style="font-size: large" Text="SignUp" Width="150px" />
+                <asp:Button ID="Button4" runat="server" onclick="Button4_Click" 
+                    style="font-size: large" Text="ContactUs" Width="150px" />
+                &nbsp;</p>
+            <p style="background-color: #99CCFF">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                
+                <script type="text/javascript" src="http://code.jquery.com/jquery-1.3.2.min.js"></script>
+
+        <script type="text/javascript">
+            var NoofImage = ['img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg'];
+            var count = NoofImage.length;
+            $(function () { setInterval(Slider, 1000) });
+            function Slider() {
+                $('#imageSlide').fadeIn("slow", function () {
+                    $(this).attr('src', NoofImage[(NoofImage.length++) % count]).fadeIn("slow");
+                });
+            }
+        </script>
+
+
+                <img id="imageSlide" src="img7.jpg" style="height: 304px; width: 750px" /> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   
+                
+                &nbsp;&nbsp;<table style="width:100%;">
+                    <tr>
+                        <td class="style1" bgcolor="#CCCCCC">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                            <asp:Image ID="Image2" runat="server" ImageUrl="~/img2.jpg" Height="73px" 
+                                Width="95px" />
+                            <br />&nbsp;&nbsp; &nbsp;<br />&nbsp;&nbsp;
+                            <asp:Label ID="Label2" runat="server" BackColor="#99CCFF" 
+                                style="font-size: large; font-weight: 700; font-style: italic; color: #FF0000" 
+                                Text="BOARD OF EXAMINATION"></asp:Label>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;This Website Serves all the activities needed&nbsp;&nbsp;&nbsp;&nbsp; for&nbsp; 
+                                before and after examination handled by&nbsp; employees of The Maharaja 
+                                SayajiRao University.&nbsp;</p>
+                            <p>
+                                &nbsp;&nbsp;
+                                <asp:Label ID="Label3" runat="server" BackColor="#99CCFF" 
+                                    style="font-size: large; font-weight: 700; font-style: italic; color: #FF0000" 
+                                    Text="What Does This Site Contains?"></asp:Label>
+                                &nbsp;</p>
+                            <p>
+                                This Site contains online database required for allocation of examination 
+                                Process of all the department of MSU.</p>
+                            <p>
+                                It also contains Information for all HOD and Subjects Of all departments.</p>
+                            <p>
+                                &nbsp;&nbsp;
+                                <asp:Label ID="Label4" runat="server" BackColor="#99CCFF" ForeColor="Black" 
+                                    style="font-size: large; font-weight: 700; color: #FF0000; font-style: italic;" 
+                                    Text="What This Site does?"></asp:Label>
+                                &nbsp;</p>
+                            <p>
+                                This Site facilitates Process Starting From Allocating Paper setting and 
+                                checking and cover paper submission in main office of MSU.</p>
+                            <div id="colTwo">
+                                <p>
+                                    This Site gives facility to HOD to submit List of all alloted exam and paper 
+                                    duty distribution.</p>
+                            </div>
+                            <div style="clear: both;">
+                                &nbsp;</div>
+                        </td>
+                        <td bgcolor="#CCCCCC">
+                            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+    <p style="background-color: #C0C0C0">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                &nbsp;</p>
+                            </asp:ContentPlaceHolder>
+                            &nbsp;</td>
+                    </tr>
+                </table>
+                &nbsp;</p>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
